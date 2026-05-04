@@ -1,0 +1,33 @@
+[
+  {
+    "desk_access": 1,
+    "doctype": "Role",
+    "name": "FTAP Dispatcher",
+    "role_name": "FTAP Dispatcher"
+  },
+  {
+    "desk_access": 1,
+    "doctype": "Role",
+    "name": "FTAP Field Technician",
+    "role_name": "FTAP Field Technician"
+  },
+  {
+    "desk_access": 1,
+    "doctype": "Role",
+    "name": "FTAP Supervisor",
+    "role_name": "FTAP Supervisor"
+  },
+  {
+    "desk_access": 1,
+    "doctype": "Role",
+    "name": "FTAP Manager",
+    "role_name": "FTAP Manager"
+  },
+  {
+    "desk_access": 1,
+    "doctype": "Role",
+    "name": "FTAP Department Head",
+    "role_name": "FTAP Department Head"
+  }
+]
+

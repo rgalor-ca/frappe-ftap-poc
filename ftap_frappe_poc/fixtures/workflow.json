@@ -1,0 +1,132 @@
+[
+  {
+    "doctype": "Workflow",
+    "document_type": "FTAP Work Order",
+    "is_active": 1,
+    "name": "FTAP Work Order Approval",
+    "override_status": 0,
+    "send_email_alert": 1,
+    "states": [
+      {
+        "allow_edit": "FTAP Dispatcher",
+        "doc_status": "0",
+        "state": "Open",
+        "update_field": "workflow_state",
+        "update_value": "Open"
+      },
+      {
+        "allow_edit": "FTAP Field Technician",
+        "doc_status": "0",
+        "state": "Dispatched",
+        "update_field": "workflow_state",
+        "update_value": "Dispatched"
+      },
+      {
+        "allow_edit": "FTAP Field Technician",
+        "doc_status": "0",
+        "state": "In Field",
+        "update_field": "workflow_state",
+        "update_value": "In Field"
+      },
+      {
+        "allow_edit": "FTAP Supervisor",
+        "doc_status": "0",
+        "state": "Field Report Submitted",
+        "update_field": "workflow_state",
+        "update_value": "Field Report Submitted"
+      },
+      {
+        "allow_edit": "FTAP Manager",
+        "doc_status": "0",
+        "state": "Supervisor Approved",
+        "update_field": "workflow_state",
+        "update_value": "Supervisor Approved"
+      },
+      {
+        "allow_edit": "FTAP Department Head",
+        "doc_status": "0",
+        "state": "Manager Approved",
+        "update_field": "workflow_state",
+        "update_value": "Manager Approved"
+      },
+      {
+        "allow_edit": "FTAP Department Head",
+        "doc_status": "1",
+        "state": "Head Approved",
+        "update_field": "workflow_state",
+        "update_value": "Head Approved"
+      },
+      {
+        "allow_edit": "FTAP Dispatcher",
+        "doc_status": "0",
+        "state": "Cancelled",
+        "update_field": "workflow_state",
+        "update_value": "Cancelled"
+      }
+    ],
+    "transitions": [
+      {
+        "action": "Dispatch",
+        "allowed": "FTAP Dispatcher",
+        "next_state": "Dispatched",
+        "state": "Open"
+      },
+      {
+        "action": "Start Work",
+        "allowed": "FTAP Field Technician",
+        "next_state": "In Field",
+        "state": "Dispatched"
+      },
+      {
+        "action": "Submit Field Report",
+        "allowed": "FTAP Field Technician",
+        "next_state": "Field Report Submitted",
+        "state": "In Field"
+      },
+      {
+        "action": "Supervisor Approve",
+        "allowed": "FTAP Supervisor",
+        "next_state": "Supervisor Approved",
+        "state": "Field Report Submitted"
+      },
+      {
+        "action": "Supervisor Reject",
+        "allowed": "FTAP Supervisor",
+        "next_state": "In Field",
+        "state": "Field Report Submitted"
+      },
+      {
+        "action": "Manager Approve",
+        "allowed": "FTAP Manager",
+        "next_state": "Manager Approved",
+        "state": "Supervisor Approved"
+      },
+      {
+        "action": "Manager Reject",
+        "allowed": "FTAP Manager",
+        "next_state": "In Field",
+        "state": "Supervisor Approved"
+      },
+      {
+        "action": "Head Approve",
+        "allowed": "FTAP Department Head",
+        "next_state": "Head Approved",
+        "state": "Manager Approved"
+      },
+      {
+        "action": "Head Reject",
+        "allowed": "FTAP Department Head",
+        "next_state": "In Field",
+        "state": "Manager Approved"
+      },
+      {
+        "action": "Cancel",
+        "allowed": "FTAP Dispatcher",
+        "next_state": "Cancelled",
+        "state": "Open"
+      }
+    ],
+    "workflow_name": "FTAP Work Order Approval",
+    "workflow_state_field": "workflow_state"
+  }
+]

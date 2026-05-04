@@ -1,0 +1,51 @@
+[
+  {
+    "doctype": "Workflow State",
+    "name": "Open",
+    "style": "Primary",
+    "workflow_state_name": "Open"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Dispatched",
+    "style": "Info",
+    "workflow_state_name": "Dispatched"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "In Field",
+    "style": "Warning",
+    "workflow_state_name": "In Field"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Field Report Submitted",
+    "style": "Warning",
+    "workflow_state_name": "Field Report Submitted"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Supervisor Approved",
+    "style": "Info",
+    "workflow_state_name": "Supervisor Approved"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Manager Approved",
+    "style": "Info",
+    "workflow_state_name": "Manager Approved"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Head Approved",
+    "style": "Success",
+    "workflow_state_name": "Head Approved"
+  },
+  {
+    "doctype": "Workflow State",
+    "name": "Cancelled",
+    "style": "Danger",
+    "workflow_state_name": "Cancelled"
+  }
+]
+

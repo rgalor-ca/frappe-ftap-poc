@@ -1,0 +1,171 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-05-04 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "alarm_id",
+    "alarm_source",
+    "alarm_type",
+    "priority",
+    "site_code",
+    "device_id",
+    "reported_at",
+    "problem_summary",
+    "ticket_status",
+    "assigned_work_order"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "FTAP-TCK-.YYYY.-.#####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "alarm_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Alarm ID",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "default": "IoT",
+      "fieldname": "alarm_source",
+      "fieldtype": "Data",
+      "label": "Alarm Source"
+    },
+    {
+      "fieldname": "alarm_type",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Alarm Type",
+      "reqd": 1
+    },
+    {
+      "default": "Medium",
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Priority",
+      "options": "Critical\nHigh\nMedium\nLow"
+    },
+    {
+      "fieldname": "site_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Site Code"
+    },
+    {
+      "fieldname": "device_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Device ID",
+      "reqd": 1
+    },
+    {
+      "fieldname": "reported_at",
+      "fieldtype": "Datetime",
+      "label": "Reported At",
+      "reqd": 1
+    },
+    {
+      "fieldname": "problem_summary",
+      "fieldtype": "Small Text",
+      "label": "Problem Summary",
+      "reqd": 1
+    },
+    {
+      "default": "Open",
+      "fieldname": "ticket_status",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Ticket Status",
+      "options": "Open\nWork Order Created\nIn Progress\nPending Approval\nClosed\nCancelled"
+    },
+    {
+      "fieldname": "assigned_work_order",
+      "fieldtype": "Link",
+      "label": "Assigned Work Order",
+      "options": "FTAP Work Order",
+      "read_only": 1
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "links": [],
+  "modified": "2026-05-04 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FTAP Workflow",
+  "name": "FTAP Service Ticket",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Dispatcher",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Field Technician"
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Supervisor",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Manager",
+      "share": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Department Head",
+      "share": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+

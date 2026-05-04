@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ftap_frappe_poc"
+version = "0.0.1"
+description = "FTAP ticketing, work order, and workflow management POC for Frappe"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "FTAP", email = "admin@example.com" }
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ftap_frappe_poc*"]
+
+[tool.setuptools.package-data]
+"ftap_frappe_poc" = ["**/*.json", "**/*.js", "**/*.css", "**/*.html", "modules.txt", "patches.txt"]
+
+[tool.bench.frappe-dependencies]
+frappe = ">=15.0.0,<17.0.0"

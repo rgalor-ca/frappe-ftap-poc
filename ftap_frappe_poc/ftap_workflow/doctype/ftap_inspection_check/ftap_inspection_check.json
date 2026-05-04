@@ -1,0 +1,59 @@
+{
+  "actions": [],
+  "allow_rename": 1,
+  "creation": "2026-05-04 00:00:00.000000",
+  "doctype": "DocType",
+  "editable_grid": 1,
+  "engine": "InnoDB",
+  "field_order": [
+    "check_item",
+    "expected_value",
+    "result",
+    "measured_value",
+    "notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "check_item",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Check Item",
+      "reqd": 1
+    },
+    {
+      "fieldname": "expected_value",
+      "fieldtype": "Data",
+      "label": "Expected Value"
+    },
+    {
+      "fieldname": "result",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Result",
+      "options": "\nPass\nFail\nN/A"
+    },
+    {
+      "fieldname": "measured_value",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Measured Value"
+    },
+    {
+      "fieldname": "notes",
+      "fieldtype": "Small Text",
+      "label": "Notes"
+    }
+  ],
+  "istable": 1,
+  "links": [],
+  "modified": "2026-05-04 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FTAP Workflow",
+  "name": "FTAP Inspection Check",
+  "owner": "Administrator",
+  "permissions": [],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": []
+}
+

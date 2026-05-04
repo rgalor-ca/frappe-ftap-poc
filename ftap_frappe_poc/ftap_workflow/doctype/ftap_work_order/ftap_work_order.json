@@ -1,0 +1,265 @@
+{
+  "actions": [],
+  "allow_import": 1,
+  "allow_rename": 1,
+  "autoname": "naming_series:",
+  "creation": "2026-05-04 00:00:00.000000",
+  "doctype": "DocType",
+  "engine": "InnoDB",
+  "field_order": [
+    "naming_series",
+    "service_ticket",
+    "workflow_state",
+    "priority",
+    "site_code",
+    "device_id",
+    "assignment_section",
+    "assigned_technician",
+    "supervisor",
+    "manager",
+    "department_head",
+    "dispatch_time",
+    "field_section",
+    "arrival_time",
+    "completion_time",
+    "inspection_checks",
+    "field_notes",
+    "technician_recommendation",
+    "safety_concerns",
+    "photo_evidence_count",
+    "approval_section",
+    "supervisor_notes",
+    "manager_notes",
+    "head_notes"
+  ],
+  "fields": [
+    {
+      "fieldname": "naming_series",
+      "fieldtype": "Select",
+      "label": "Naming Series",
+      "options": "FTAP-WO-.YYYY.-.#####",
+      "reqd": 1
+    },
+    {
+      "fieldname": "service_ticket",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Service Ticket",
+      "options": "FTAP Service Ticket",
+      "reqd": 1,
+      "unique": 1
+    },
+    {
+      "default": "Open",
+      "fieldname": "workflow_state",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Workflow State",
+      "options": "Open\nDispatched\nIn Field\nField Report Submitted\nSupervisor Approved\nManager Approved\nHead Approved\nCancelled"
+    },
+    {
+      "default": "Medium",
+      "fieldname": "priority",
+      "fieldtype": "Select",
+      "in_list_view": 1,
+      "label": "Priority",
+      "options": "Critical\nHigh\nMedium\nLow"
+    },
+    {
+      "fieldname": "site_code",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Site Code"
+    },
+    {
+      "fieldname": "device_id",
+      "fieldtype": "Data",
+      "in_list_view": 1,
+      "label": "Device ID"
+    },
+    {
+      "fieldname": "assignment_section",
+      "fieldtype": "Section Break",
+      "label": "Assignment"
+    },
+    {
+      "fieldname": "assigned_technician",
+      "fieldtype": "Link",
+      "in_list_view": 1,
+      "label": "Assigned Technician",
+      "options": "User"
+    },
+    {
+      "fieldname": "supervisor",
+      "fieldtype": "Link",
+      "label": "Supervisor",
+      "options": "User"
+    },
+    {
+      "fieldname": "manager",
+      "fieldtype": "Link",
+      "label": "Manager",
+      "options": "User"
+    },
+    {
+      "fieldname": "department_head",
+      "fieldtype": "Link",
+      "label": "Department Head",
+      "options": "User"
+    },
+    {
+      "fieldname": "dispatch_time",
+      "fieldtype": "Datetime",
+      "label": "Dispatch Time"
+    },
+    {
+      "fieldname": "field_section",
+      "fieldtype": "Section Break",
+      "label": "Field Report"
+    },
+    {
+      "fieldname": "arrival_time",
+      "fieldtype": "Datetime",
+      "label": "Arrival Time"
+    },
+    {
+      "fieldname": "completion_time",
+      "fieldtype": "Datetime",
+      "label": "Completion Time"
+    },
+    {
+      "fieldname": "inspection_checks",
+      "fieldtype": "Table",
+      "label": "Inspection Checks",
+      "options": "FTAP Inspection Check"
+    },
+    {
+      "fieldname": "field_notes",
+      "fieldtype": "Small Text",
+      "label": "Field Notes"
+    },
+    {
+      "fieldname": "technician_recommendation",
+      "fieldtype": "Select",
+      "label": "Technician Recommendation",
+      "options": "\nRepair Completed\nReplace Parts\nEscalate\nNo Issue Found"
+    },
+    {
+      "fieldname": "safety_concerns",
+      "fieldtype": "Small Text",
+      "label": "Safety Concerns"
+    },
+    {
+      "default": "0",
+      "fieldname": "photo_evidence_count",
+      "fieldtype": "Int",
+      "label": "Photo Evidence Count",
+      "read_only": 1
+    },
+    {
+      "fieldname": "approval_section",
+      "fieldtype": "Section Break",
+      "label": "Approvals"
+    },
+    {
+      "fieldname": "supervisor_notes",
+      "fieldtype": "Small Text",
+      "label": "Supervisor Notes"
+    },
+    {
+      "fieldname": "manager_notes",
+      "fieldtype": "Small Text",
+      "label": "Manager Notes"
+    },
+    {
+      "fieldname": "head_notes",
+      "fieldtype": "Small Text",
+      "label": "Head Notes"
+    }
+  ],
+  "index_web_pages_for_search": 1,
+  "is_submittable": 1,
+  "links": [],
+  "modified": "2026-05-04 00:00:00.000000",
+  "modified_by": "Administrator",
+  "module": "FTAP Workflow",
+  "name": "FTAP Work Order",
+  "naming_rule": "By \"Naming Series\" field",
+  "owner": "Administrator",
+  "permissions": [
+    {
+      "amend": 1,
+      "cancel": 1,
+      "create": 1,
+      "delete": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "System Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "create": 1,
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Dispatcher",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Field Technician",
+      "share": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Supervisor",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Manager",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    },
+    {
+      "email": 1,
+      "export": 1,
+      "print": 1,
+      "read": 1,
+      "report": 1,
+      "role": "FTAP Department Head",
+      "share": 1,
+      "submit": 1,
+      "write": 1
+    }
+  ],
+  "sort_field": "modified",
+  "sort_order": "DESC",
+  "states": [],
+  "track_changes": 1
+}
+
